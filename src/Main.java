@@ -15,8 +15,12 @@ public class Main {
     private static void printFilm(Film peliculas) {
         System.out.println("El títol de la peli es: " + peliculas.getTitle() );
         System.out.println("El nom del director es: " + peliculas.getDirectorName() );
-        System.out.println("Porno: " + peliculas.isPorno() );
+        System.out.println("Porno: " + printBoolean(peliculas.isPorno()));
 
+    }
+    private static String printBoolean(boolean value) {
+        if (value) return "Sí";
+        return "No";
     }
 
     private static boolean askIsPorno() {
